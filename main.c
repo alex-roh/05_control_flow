@@ -5,6 +5,8 @@
 
 int main(int argc, char *argv[]) {
 	
+	// 실습 1 
+	
 	int num = 0;
 	
 	printf("정수를 입력하세요: \n");
@@ -19,7 +21,18 @@ int main(int argc, char *argv[]) {
 		printf("양수가 아닙니다.\n");
 	}
 	
-	printf("사용자 입력값: %d\n", num);
+	// 실습 2
+	
+	printf("다시 정수 하나를 입력하세요: \n");
+	scanf("%d", &num);
+	if(num < 0)
+	{	
+		printf("입력한 정수의 절대값은 %d입니다.", -num); 
+	}
+	else
+	{
+		printf("입력한 정수의 절대값은 %d입니다.", num); 
+	}
 	
 	return 0;
 	
