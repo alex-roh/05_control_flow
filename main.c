@@ -70,7 +70,48 @@ int main(int argc, char *argv[]) {
 	// 실습 5
 	for(i = 0; i < 10; i++)
 		printf("Hello World!\n"); 
+		
+	
+	// 실습 6
+	num = 0;
+	char c;
+	getchar(); // 버퍼 비우기 
+	
+	printf("문자열을 입력하세요: ");
+	
+	while((c = getchar()) != '\n')
+	{
+		if (c <= '9' && c >= '0')
+		{
+			num++;
+		}
+	}
+	
+	printf("문자열에 있는 문자의 개수는 %d개입니다.\n", num);
+	
+	// 실습 7 
+	int correct_num = 45;
+	int trial = 0;
+	
+	while(1)
+	{
+		trial++;
+		num = 0;
+		printf("수를 추측해서 입력하세요: ");
+		scanf("%d", &num);
+		if(num == correct_num){
+			printf("정답을 맞추셨습니다! 시도 횟수는 %d번입니다.\n", trial);
+			break;
+		}
+		else if (num > correct_num)
+		{
+			printf("더 낮은 수를 입력하세요.\n");
+		}
+		else if(num < correct_num)
+		{
+			printf("더 높은 수를 입력하세요.\n");
+		}
+	}
 	
 	return 0;
-	
 }
