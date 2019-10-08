@@ -91,16 +91,16 @@ int main(int argc, char *argv[]) {
 	
 	// 실습 7 
 	int correct_num = 45;
-	int trial = 0;
+	int count = 0;
 	
 	while(1)
 	{
-		trial++;
+		count++;
 		num = 0;
 		printf("수를 추측해서 입력하세요: ");
 		scanf("%d", &num);
 		if(num == correct_num){
-			printf("정답을 맞추셨습니다! 시도 횟수는 %d번입니다.\n", trial);
+			printf("정답을 맞추셨습니다! 시도 횟수는 %d번입니다.\n", count);
 			break;
 		}
 		else if (num > correct_num)
